@@ -60,8 +60,8 @@ Following gif shows how syntaxnet internally builds the dependency tree:
 
 ## 4. Project Structure:
 - **/models:** Originally cloned from syntaxnet git repository https://github.com/tensorflow/models . But this folder will additionally contain the bazel build “bazel-bin" folder with the needed runfiles.
-- **custom_context.pbtxt:** Custom context file used in setting task context. Heavily inspired from here. https://github.com/plowman/python-mcparseface/blob/master/custom_context.pbtxt 
-- **my_parser_eval.py:** python wrapper for “brain-tagger” POS tagger and “brain-parser” dependency parser. This file is tweak of the original parser_eval.py that synthxnet provides.  https://github.com/tensorflow/models/blob/master/syntaxnet/syntaxnet/parser_eval.py. with quiet some modifications like ability to call wrapper several times without needing to load model eveytime etc.
+- **custom_context.pbtxt:** Custom context file used in setting context for parser.
+- **my_parser_eval.py:** python wrapper for “brain-tagger” POS tagger and “brain-parser” dependency parser. This file is heavily inspired from the [original parser_eval.py that syntaxnet provides](https://github.com/tensorflow/models/blob/master/syntaxnet/syntaxnet/parser_eval.py) with quiet some modifications aand enhancements.
 - **main.py:** Demo sample usage
 - **/data:** folder where parser’s intermediate input’s and output’s are dumped.
 - **.whl:** osx package distribution of the final successful syntaxnet built using which you can setup `syntaxnet 0.2 version` in barely 5 minutes 
