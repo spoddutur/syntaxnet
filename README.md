@@ -1,10 +1,10 @@
-## Syntaxnet Parsey McParseface Python Wrapper
+# Syntaxnet Parsey McParseface Python Wrapper
 **Note:** This syntaxnet built contains the [Great Model Move change](https://github.com/tensorflow/models/pull/2430). 
 
 ## This project does two things:
 - **One line (~5mins) SyntaxNet 0.2 installation**: 
-Am sharing the final .whl file that I’ve built using which you can setup syntaxnet in barely 5 minutes 
-‘sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl’
+```sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl```
+
 **Specs**:
 <img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" height="100"/>
 
@@ -35,3 +35,4 @@ Following gif shows how syntaxnet internally builds the dependency tree:
 - **my_parser_eval.py:** python wrapper for “brain-tagger” POS tagger and “brain-parser” dependency parser. This file is tweak of the original parser_eval.py that synthxnet provides.  https://github.com/tensorflow/models/blob/master/syntaxnet/syntaxnet/parser_eval.py. with quiet some modifications like ability to call wrapper several times without needing to load model eveytime etc.
 - **main.py:** Demo sample usage
 - **/data:** folder where parser’s intermediate input’s and output’s are dumped.
+- **.whl:** osx package distribution of the final successful syntaxnet built using which you can setup `syntaxnet 0.2 version` in barely 5 minutes 
