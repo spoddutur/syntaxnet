@@ -8,8 +8,8 @@ Iam sharing the osx package distribution `i.e., .whl file` that I've got success
 ```markdown
 sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ```
-###### Specs:
-<img src="https://user-images.githubusercontent.com/22542670/38137612-4733f588-3443-11e8-8d32-8f03d90c5122.png" width="400" height="300"/>
+##### Specs:
+<img src="https://user-images.githubusercontent.com/22542670/38137700-d6bb2276-3443-11e8-8aa2-6f883d978fed.png" width="600" height="100"/>
 
 2. **Syntaxnet Parsey McParseface wrapper**: 
 
