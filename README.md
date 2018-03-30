@@ -1,7 +1,7 @@
 # Syntaxnet Parsey McParseface Python Wrapper for DependencyParsing
 **Note:** This syntaxnet built contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
 
-## 1. What does this project do?
+### Introduction - Troubles of the world's best parser SyntaxNet
 
 When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source](https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html), it grabbed widespread attention from machine-learning developers and researchers who were interested in core applications of NLU like automatic extraction of information, translation etc 
 
@@ -23,6 +23,7 @@ Apart from having `high struggles in installation and huge learning curve, No of
 - Confusing I/O handling in SyntaxNet because of default .conll format
 - How to use/export the output (ascii tree or conll ) in a format that is easy to parse
 
+## 1. What does this project do
 This endevour addresses to make the life of SyntaxNet enthusiasts easier. It primarily saves all those hours to get `Google's SyntaxNet Parsey McParseface` up and running in a way it should be. For this, am providing two things as part of this project:
 1. **One line (~5mins) SyntaxNet 0.2 installation**
 2. **Syntaxnet Parsey McParseface wrapper**
