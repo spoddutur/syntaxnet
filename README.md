@@ -1,12 +1,29 @@
 ## Syntaxnet Parsey McParseface Python Wrapper
 **Note:** This syntaxnet built contains the [Great Model Move change](https://github.com/tensorflow/models/pull/2430). 
 
-# This project does three things:
+# Specs:
+![image](https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png)
+
+## This project does two things:
 - **One line (~5mins) SyntaxNet 0.2 installation**: 
 Am sharing the final .whl file that I’ve built using which you can setup syntaxnet in barely 5 minutes 
 ‘sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl’
 
 - **Syntaxnet Parsey McParseface wrapper**: This project lets you use Google's SyntaxNet Parsey McParseface (en Model) from python code saving you all the hours of dealing with installation setup and training models. In particular, I’ve demoed Dependency Parsing using syntaxnet.
-
-![out] https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif 
+![out](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif)
 Specs:
+
+## How to run the parser:
+1. git clone https://github.com/spoddutur/syntaxnet.git
+2. cd <syntaxnet-git-directory>
+3. python main.py
+4. Input to main.py: “Bob brought the pizza to Alice”
+5. Output:
+![image](https://user-images.githubusercontent.com/22542670/38134694-d492419e-3431-11e8-87a3-dcd6d0d36ebb.png)
+
+## Project Structure:
+- **/models:** Originally cloned from syntaxnet git repository https://github.com/tensorflow/models . But this folder will additionally contain the bazel build “bazel-bin" folder with the needed runfiles.
+- **custom_context.pbtxt:** Custom context file used in setting task context. Heavily inspired from here. https://github.com/plowman/python-mcparseface/blob/master/custom_context.pbtxt 
+- **my_parser_eval.py:** python wrapper for “brain-tagger” POS tagger and “brain-parser” dependency parser. This file is tweak of the original parser_eval.py that synthxnet provides.  https://github.com/tensorflow/models/blob/master/syntaxnet/syntaxnet/parser_eval.py. with quiet some modifications like ability to call wrapper several times without needing to load model eveytime etc.
+- **main.py:** Demo sample usage
+- **/data:** folder where parser’s intermediate input’s and output’s are dumped.
