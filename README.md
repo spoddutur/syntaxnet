@@ -1,7 +1,7 @@
 # Syntaxnet Parsey McParseface Python Wrapper for DependencyParsing
 **Note:** This syntaxnet built contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
 
-### Introduction - Troubles of the world's best parser SyntaxNet
+## Introduction - Troubles of the world's best parser SyntaxNet
 
 When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source](https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html), it grabbed widespread attention from machine-learning developers and researchers who were interested in core applications of NLU like automatic extraction of information, translation etc 
 
