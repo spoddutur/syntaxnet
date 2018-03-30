@@ -23,7 +23,7 @@ sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 
 It can be easily made generic and extended further to add more parsers like **brain-morpher** etc as needed. The list of API's exposed in this wrapper are listed below:
 ```markdown
-1. One line Api to initialise parser: 
+1. Api to initialise parser: 
 `tagger = my_parser_eval.SyntaxNetProcess("brain_tagger")`
 
 2. Api to input data to parser: 
