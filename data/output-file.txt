@@ -1,0 +1,7 @@
+1	Bob	_	NOUN	NNP	_	2	nsubj	_	_
+2	brought	_	VERB	VBD	_	0	ROOT	_	_
+3	the	_	DET	DT	_	4	det	_	_
+4	pizza	_	NOUN	NN	_	2	dobj	_	_
+5	to	_	ADP	IN	_	2	prep	_	_
+6	Alice	_	NOUN	NNP	_	5	pobj	_	_
+

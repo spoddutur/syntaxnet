@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/surthi/mygitrepo/syntaxnet/models/research/syntaxnet/examples/dragnn/data/en/"
+all_model_checkpoint_paths: "/Users/surthi/mygitrepo/syntaxnet/models/research/syntaxnet/examples/dragnn/data/en/"
