@@ -2,6 +2,24 @@
 **Note:** This syntaxnet built contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
 
 ## 1. What does this project do?
+
+When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source](https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html), it grabbed widespread attention from machine-learning developers and researchers who were interested in core applications of NLU like automatic extraction of information, translation etc 
+
+Pain Part - Syntaxnet is a RESEARCH MODEL:
+- After The Great Models Move, Tensorflow categorized SyntaxNet as RESEARCH model.
+- As mentioned [here](https://github.com/tensorflow/models/pull/2430), Tensorflow team will no more provide  guaranteed support to SyntaxNet.
+- Tensorflow team encouraged Individual researchers to support research models.
+- The other pain part of this restructure is that all existing links within the repo will be broken. 
+
+Cherry on top of icing for the pain:
+Apart from having high struggles in installation and huge learning curve, No official support and lack of clear documentation led forums talking about myraid of issues on SyntaxNet without proper solutions. Some of them were as basic as:
+- A lot of trouble understanding documentation around both syntaxnet and related tools
+- How to use Parsey McParseface model in python application
+- Confusing I/O handling in SyntaxNet because of default .conll format
+- How to use/export the output (ascii tree or conll ) in a format that is easy to parse
+
+This endevour addresses to make the life of SyntaxNet enthusiasts easier. It primarily saves all those hours to get it up and running in a way it should be. 
+
 This project primarily saves you all the hours of dealing with installation and setup needed to use `Google's SyntaxNet Parsey McParseface` from inside your python code. It achieves this by providing two things:
 1. **One line (~5mins) SyntaxNet 0.2 installation**
 2. **Syntaxnet Parsey McParseface wrapper**
@@ -17,11 +35,7 @@ sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 <img src="https://user-images.githubusercontent.com/22542670/38137700-d6bb2276-3443-11e8-8aa2-6f883d978fed.png" width="600" height="100"/>
 
 ## 1.2 Syntaxnet Parsey McParseface wrapper 
-`my_parser_eval.py` is the file that contains python-wrapper which I implemented. It wraps following two parsers for demo: 
-1. **brain-tagger** POS tagger and 
-2. **brain-parser** dependency parser. 
-
-It can be easily made generic and extended further to add more parsers like **brain-morpher** etc as needed. The list of API's exposed in this wrapper are listed below:
+`my_parser_eval.py` is the file that contains python-wrapper which I implemented. The list of API's exposed in this wrapper are listed below:
 ```markdown
 1. Api to initialise parser: 
 `tagger = my_parser_eval.SyntaxNetProcess("brain_tagger")`
