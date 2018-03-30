@@ -1,24 +1,32 @@
 ## Syntaxnet Parsey McParseface Python Wrapper
 **Note:** This syntaxnet built contains the [Great Model Move change](https://github.com/tensorflow/models/pull/2430). 
 
-# Specs:
-![image](https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png)
-
 ## This project does two things:
 - **One line (~5mins) SyntaxNet 0.2 installation**: 
 Am sharing the final .whl file that I’ve built using which you can setup syntaxnet in barely 5 minutes 
 ‘sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl’
+**Specs**:
+<img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" height="100"/>
 
 - **Syntaxnet Parsey McParseface wrapper**: This project lets you use Google's SyntaxNet Parsey McParseface (en Model) from python code saving you all the hours of dealing with installation setup and training models. In particular, I’ve demoed Dependency Parsing using syntaxnet.
-![out](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif)
-Specs:
+
+## Demo
+- I wrote a sample python code to use this wrapper and run syntaxnet's dependency parser. 
+- **Input:** English sentence text
+- **Output:** Dependency graph tree
+
+Following gif shows how syntaxnet internally builds the dependency tree:
+<img src="https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif" width="300" height="100"/>
 
 ## How to run the parser:
+```markdown
 1. git clone https://github.com/spoddutur/syntaxnet.git
-2. cd <syntaxnet-git-directory>
-3. python main.py
-4. Input to main.py: “Bob brought the pizza to Alice”
-5. Output:
+2. cd <syntaxnet-git-clone-directory>
+3. python main.py 
+4. That's it!!  You'll see prints syntaxnet dependency parser output for given english sentence
+```
+
+## Sample output for “Bob brought the pizza to Alice” input
 ![image](https://user-images.githubusercontent.com/22542670/38134694-d492419e-3431-11e8-87a3-dcd6d0d36ebb.png)
 
 ## Project Structure:
