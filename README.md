@@ -2,7 +2,7 @@
 **Note:** This syntaxnet built contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
 
 ## 1. What does this project do?
-This project primarily saves you all the hours of dealing with installation, setup and using syntaxnet models from inside your python code. It achieves this by providing two things:
+This project primarily saves you all the hours of dealing with installation and setup needed to use syntaxnet models from inside your python code. It achieves this by providing two things:
 1. **One line (~5mins) SyntaxNet 0.2 installation**
 2. **Syntaxnet Parsey McParseface wrapper**
 
