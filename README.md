@@ -9,8 +9,7 @@ Iam sharing the osx package distribution `i.e., **.whl** file` that I've got suc
 sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ```
 ###### Specs:
-
-<img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" width="600" height="100"/>
+![image](https://user-images.githubusercontent.com/22542670/38137612-4733f588-3443-11e8-8d32-8f03d90c5122.png)
 
 2. **Syntaxnet Parsey McParseface wrapper**: 
 
