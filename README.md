@@ -3,11 +3,12 @@
 
 ## This project does two things:
 - **One line (~5mins) SyntaxNet 0.2 installation**: Iam sharing the osx package distribution **.whl** file of the final successful syntaxnet built using which you can setup `syntaxnet 0.2 version` in barely 5 minutes as shown below:
+```markdown
+sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
+```
+**Specs:**
 
-```sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl```
-
-##### <\t> Specs:
-<img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" height="100"/>
+<img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" height="80" width="300" />
 
 - **Syntaxnet Parsey McParseface wrapper**: This project lets you use Google's SyntaxNet Parsey McParseface (en Model) from python code saving you all the hours of dealing with installation setup and training models. In particular, I’ve demoed Dependency Parsing using syntaxnet.
 
