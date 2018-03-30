@@ -10,9 +10,11 @@ sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ```
 ###### Specs:
 
-<img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" width="700" height="100"/>
+<img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" width="600" height="100"/>
 
-2. **Syntaxnet Parsey McParseface wrapper**: This project lets you use Google's SyntaxNet Parsey McParseface (en Model) from python code saving you all the hours of dealing with installation setup and training models. In particular, I’ve demoed Dependency Parsing using syntaxnet.
+2. **Syntaxnet Parsey McParseface wrapper**: 
+
+This project lets you use Google's SyntaxNet Parsey McParseface (en Model) from python code saving you all the hours of dealing with installation setup and training models. In particular, I’ve demoed Dependency Parsing using syntaxnet.
 
 ## Demo
 - I wrote `main.py` (a sample python code) to use this wrapper and run syntaxnet's dependency parser. 
