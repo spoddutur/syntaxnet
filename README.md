@@ -6,7 +6,7 @@
 
 ```sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl```
 
-### Specs:
+#### Specs:
 <img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" height="100"/>
 
 - **Syntaxnet Parsey McParseface wrapper**: This project lets you use Google's SyntaxNet Parsey McParseface (en Model) from python code saving you all the hours of dealing with installation setup and training models. In particular, I’ve demoed Dependency Parsing using syntaxnet.
@@ -17,18 +17,20 @@
 - **Output:** Dependency graph tree
 
 Following gif shows how syntaxnet internally builds the dependency tree:
-<img src="https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif" width="300" height="100"/>
+
+
+<img src="https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif" width="500" height="300"/>
 
 ## How to run the parser:
 ```markdown
 1. git clone https://github.com/spoddutur/syntaxnet.git
 2. cd <syntaxnet-git-clone-directory>
 3. python main.py 
-4. That's it!!  You'll see prints syntaxnet dependency parser output for given english sentence
+4. That's it!!  It prints syntaxnet dependency parser output for given input english sentence
 ```
 
 ## Sample output for “Bob brought the pizza to Alice” input
-![image](https://user-images.githubusercontent.com/22542670/38134694-d492419e-3431-11e8-87a3-dcd6d0d36ebb.png)
+<img src="https://user-images.githubusercontent.com/22542670/38134694-d492419e-3431-11e8-87a3-dcd6d0d36ebb.png" width="300"/>
 
 ## Project Structure:
 - **/models:** Originally cloned from syntaxnet git repository https://github.com/tensorflow/models . But this folder will additionally contain the bazel build “bazel-bin" folder with the needed runfiles.
