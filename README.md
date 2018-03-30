@@ -17,11 +17,11 @@ sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 <img src="https://user-images.githubusercontent.com/22542670/38137700-d6bb2276-3443-11e8-8aa2-6f883d978fed.png" width="600" height="100"/>
 
 ## 1.2 Syntaxnet Parsey McParseface wrapper 
-`my_parser_eval.py` is the file that contains python-wrapper that I implemented to wrap: 
+`my_parser_eval.py` is the file that contains python-wrapper which I implemented. It wraps following two parsers for demo: 
 1. **brain-tagger** POS tagger and 
 2. **brain-parser** dependency parser. 
 
-It can be easily extended further to add more parsers like **brain-morpher** etc. The list of API's exposed in thsi wrapper are listed below:
+It can be easily made generic and extended further to add more parsers like **brain-morpher** etc as needed. The list of API's exposed in this wrapper are listed below:
 ```markdown
 1. Initialise parser: `tagger = my_parser_eval.SyntaxNetProcess("brain_tagger")`
 2. Api to input data to parser: `my_parser_eval._write_input("<YOUR_ENGLISH_SENTENCE_INPUT>")`
