@@ -38,7 +38,8 @@ sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 <img src="https://user-images.githubusercontent.com/22542670/38137700-d6bb2276-3443-11e8-8aa2-6f883d978fed.png" width="600" height="100"/>
 
 ## 1.2 Syntaxnet Parsey McParseface wrapper 
-`my_parser_eval.py` is the file that contains python-wrapper which I implemented. The list of API's exposed in this wrapper are listed below:
+##### Here comes the most interesting (a.k.a challenging) part i.e., How to use syntaxnet in a python application.
+`my_parser_eval.py` is the file that contains the python-wrapper which I implemented to wrap SyntaxNet. The list of API's exposed in this wrapper are listed below:
 ```markdown
 1. Api to initialise parser: 
 `tagger = my_parser_eval.SyntaxNetProcess("brain_tagger")`
