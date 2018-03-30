@@ -1,4 +1,4 @@
-# Syntaxnet Parsey McParseface Python Wrapper
+# Syntaxnet Parsey McParseface Python Wrapper for DependencyParsing
 **Note:** This syntaxnet built contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
 
 ## 1. What does this project do?
