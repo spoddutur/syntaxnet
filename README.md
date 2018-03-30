@@ -4,12 +4,12 @@
 ## This project does two things:
 1. **One line (~5mins) SyntaxNet 0.2 installation**: 
 
-Iam sharing the osx package distribution `i.e., **.whl** file` that I've got successfully built using `bazel` build tool with all tests passing after pulling the latest code from [syntaxnet git repository](https://github.com/tensorflow/models). This will setup `syntaxnet 0.2 version` in barely 5 minutes as shown below:
+Iam sharing the osx package distribution `i.e., .whl file` that I've got successfully built using `bazel` build tool with all tests passing after pulling the latest code from [syntaxnet git repository](https://github.com/tensorflow/models). This will setup `syntaxnet 0.2 version` in barely 5 minutes as shown below:
 ```markdown
 sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ```
 ###### Specs:
-![image](https://user-images.githubusercontent.com/22542670/38137612-4733f588-3443-11e8-8d32-8f03d90c5122.png)
+<img src="https://user-images.githubusercontent.com/22542670/38137612-4733f588-3443-11e8-8d32-8f03d90c5122.png" width="400" height="300"/>
 
 2. **Syntaxnet Parsey McParseface wrapper**: 
 
