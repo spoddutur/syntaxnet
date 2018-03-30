@@ -43,11 +43,6 @@ It can be easily made generic and extended further to add more parsers like **br
 - **Input to main.py:** English sentence text
 - **Output from main.py:** Dependency graph tree
 
-
-Following gif shows how syntaxnet internally builds the dependency tree:
-
-<img src="https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif" width="500" height="300"/>
-
 ## 3. How to run the parser:
 ```markdown
 1. git clone https://github.com/spoddutur/syntaxnet.git
@@ -58,6 +53,10 @@ Following gif shows how syntaxnet internally builds the dependency tree:
 
 #### 3.1 Sample output for “Bob brought the pizza to Alice” input
 <img src="https://user-images.githubusercontent.com/22542670/38134694-d492419e-3431-11e8-87a3-dcd6d0d36ebb.png" width="300"/>
+
+Following gif shows how syntaxnet internally builds the dependency tree:
+
+<img src="https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif" width="500" height="300"/>
 
 ## 4. Project Structure:
 - **/models:** Originally cloned from syntaxnet git repository https://github.com/tensorflow/models . But this folder will additionally contain the bazel build “bazel-bin" folder with the needed runfiles.
