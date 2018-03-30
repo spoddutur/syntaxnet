@@ -2,13 +2,13 @@
 **Note:** This syntaxnet built contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
 
 ## This project does two things:
-1. **One line (~5mins) SyntaxNet 0.2 installation**: Iam sharing the osx package distribution i.e., **.whl** file of the final successful syntaxnet built. This will setup `syntaxnet 0.2 version` in barely 5 minutes as shown below:
+1. **One line (~5mins) SyntaxNet 0.2 installation**: Iam sharing the osx package distribution `i.e., **.whl** file` that I've got successfully built using `bazel` build tool with all tests passing after pulling the latest code from [syntaxnet git repository](https://github.com/tensorflow/models). This will setup `syntaxnet 0.2 version` in barely 5 minutes as shown below:
 ```markdown
 sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ```
 **Specs:**
 
-<img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" width="800" height="200"/>
+<img src="https://user-images.githubusercontent.com/22542670/38134683-ca75dcac-3431-11e8-850e-b6379c07957b.png" width="800" height="125"/>
 
 2. **Syntaxnet Parsey McParseface wrapper**: This project lets you use Google's SyntaxNet Parsey McParseface (en Model) from python code saving you all the hours of dealing with installation setup and training models. In particular, I’ve demoed Dependency Parsing using syntaxnet.
 
