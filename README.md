@@ -10,11 +10,10 @@ When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source
 
 
 - After The Great Models Move, Tensorflow categorized SyntaxNet as RESEARCH model.
-- As mentioned [here](https://github.com/tensorflow/models/pull/2430), Tensorflow team will no more provide  guaranteed support to SyntaxNet.
-- Tensorflow team encouraged Individual researchers to support research models.
-- The other pain part of this restructure is that all existing links within the repo will be broken. 
+- As mentioned [here](https://github.com/tensorflow/models/pull/2430), Tensorflow team will no more provide  guaranteed support to SyntaxNet and they encouraged **Individual researchers to support** research models.
+- The worser pain part of this restructure is that it came with broken links within the repository which added to the woes of its installation. 
 
-#### Cherry on top of icing for the pain:
+#### Salt on the wound:
 <hr/>
 
 
