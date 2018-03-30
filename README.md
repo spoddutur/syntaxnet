@@ -20,7 +20,7 @@ When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source
 Apart from having `high struggles in installation and huge learning curve, No official support and lack of clear documentation` led forums talking about myraid of issues on SyntaxNet without proper solutions. Some of them were as basic as:
 - A lot of trouble understanding documentation around both syntaxnet and related tools
 - How to use Parsey McParseface model in python application
-- Confusing I/O handling in SyntaxNet because of default .conll format
+- Confusing I/O handling in SyntaxNet because of the uncommon .conll file format it uses for input and output.
 - How to use/export the output (ascii tree or conll ) in a format that is easy to parse
 
 ## 1. What does this project do
