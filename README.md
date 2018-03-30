@@ -6,21 +6,21 @@
 When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source](https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html), it grabbed widespread attention from machine-learning developers and researchers who were interested in core applications of NLU like automatic extraction of information, translation etc 
 
 #### Pain Part - Syntaxnet is a RESEARCH MODEL:
+<hr/>
 - After The Great Models Move, Tensorflow categorized SyntaxNet as RESEARCH model.
 - As mentioned [here](https://github.com/tensorflow/models/pull/2430), Tensorflow team will no more provide  guaranteed support to SyntaxNet.
 - Tensorflow team encouraged Individual researchers to support research models.
 - The other pain part of this restructure is that all existing links within the repo will be broken. 
 
 #### Cherry on top of icing for the pain:
+<hr/>
 Apart from having high struggles in installation and huge learning curve, No official support and lack of clear documentation led forums talking about myraid of issues on SyntaxNet without proper solutions. Some of them were as basic as:
 - A lot of trouble understanding documentation around both syntaxnet and related tools
 - How to use Parsey McParseface model in python application
 - Confusing I/O handling in SyntaxNet because of default .conll format
 - How to use/export the output (ascii tree or conll ) in a format that is easy to parse
 
-This endevour addresses to make the life of SyntaxNet enthusiasts easier. It primarily saves all those hours to get it up and running in a way it should be. 
-
-This project primarily saves you all the hours of dealing with installation and setup needed to use `Google's SyntaxNet Parsey McParseface` from inside your python code. It achieves this by providing two things:
+This endevour addresses to make the life of SyntaxNet enthusiasts easier. It primarily saves all those hours to get `Google's SyntaxNet Parsey McParseface` up and running in a way it should be. For this, am providing two things as part of this project:
 1. **One line (~5mins) SyntaxNet 0.2 installation**
 2. **Syntaxnet Parsey McParseface wrapper**
 
