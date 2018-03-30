@@ -25,12 +25,16 @@ It can be easily made generic and extended further to add more parsers like **br
 ```markdown
 1. One line Api to initialise parser: 
 `tagger = my_parser_eval.SyntaxNetProcess("brain_tagger")`
+
 2. Api to input data to parser: 
 `my_parser_eval._write_input("<YOUR_ENGLISH_SENTENCE_INPUT>")`
+
 3. Api to invoke parser: 
 `tagger.eval()`
+
 3. Api to read parser's output in conll format:
 `my_parser_eval._read_output()`
+
 4. Api to pretty print parser's output as tree: 
 `my_parser_eval.pretty_print()`
 ```
