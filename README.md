@@ -5,13 +5,13 @@
 
 When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source](https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html), it grabbed widespread attention from machine-learning developers and researchers who were interested in core applications of NLU like automatic extraction of information, translation etc 
 
-Pain Part - Syntaxnet is a RESEARCH MODEL:
+#### Pain Part - Syntaxnet is a RESEARCH MODEL:
 - After The Great Models Move, Tensorflow categorized SyntaxNet as RESEARCH model.
 - As mentioned [here](https://github.com/tensorflow/models/pull/2430), Tensorflow team will no more provide  guaranteed support to SyntaxNet.
 - Tensorflow team encouraged Individual researchers to support research models.
 - The other pain part of this restructure is that all existing links within the repo will be broken. 
 
-Cherry on top of icing for the pain:
+#### Cherry on top of icing for the pain:
 Apart from having high struggles in installation and huge learning curve, No official support and lack of clear documentation led forums talking about myraid of issues on SyntaxNet without proper solutions. Some of them were as basic as:
 - A lot of trouble understanding documentation around both syntaxnet and related tools
 - How to use Parsey McParseface model in python application
