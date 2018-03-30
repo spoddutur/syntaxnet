@@ -1,5 +1,5 @@
 # Syntaxnet Parsey McParseface Python Wrapper
-**Note:** This syntaxnet built contains the [Great Model Move change](https://github.com/tensorflow/models/pull/2430). 
+**Note:** This syntaxnet built contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
 
 ## This project does two things:
 - **One line (~5mins) SyntaxNet 0.2 installation**: 
