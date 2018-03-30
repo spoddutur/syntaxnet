@@ -9,9 +9,9 @@ When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source
 <hr/>
 
 
-- After The Great Models Move, Tensorflow categorized SyntaxNet as RESEARCH model.
+- After The Great Models Move, Tensorflow categorized SyntaxNet as RESEARCH MODEL.
 - As mentioned [here](https://github.com/tensorflow/models/pull/2430), Tensorflow team will no more provide  guaranteed support to SyntaxNet and they encouraged **Individual researchers to support** research models.
-- The worser pain part of this restructure is that it came with broken links within the repository which added to the woes of its installation. 
+- The worser pain part of this restructure is that, it came with broken links within the repository which added to the woes of its installation. 
 
 #### Salt on the wound:
 <hr/>
