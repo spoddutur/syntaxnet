@@ -32,9 +32,9 @@ print(sess.run(hello))
  pip install numpy
  pip install autograd==1.1.13
  Install bazel 0.5.4
- Download bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh from  https://github.com/bazelbuild/bazel/releases 
- chmod +x ~/Downloads/bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh
- sh ~/Downloads/bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh
+   - Download bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh from  https://github.com/bazelbuild/bazel/releases 
+   - chmod +x ~/Downloads/bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh
+   - sh ~/Downloads/bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh
  pip install mock
  brew install graphviz
  pip install pygraphviz
