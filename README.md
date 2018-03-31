@@ -22,7 +22,7 @@ Apart from having `high struggles in installation and huge learning curve, no of
 - Confusing I/O handling in SyntaxNet because of the uncommon .conll file format it uses for input and output.
 - How to use/export the output (ascii tree or conll ) in a format that is easy to parse
 
-## 2. What does this project do
+## 2. What this project does?
 This endevour addresses to make the life of SyntaxNet enthusiasts easier. It primarily saves all those hours to get `Google's SyntaxNet Parsey McParseface` up and running in a way it should be. For this, am providing two things as part of this project:
 1. **One line (~5mins) SyntaxNet 0.2 installation**
 2. **Syntaxnet Parsey McParseface wrapper for POS tagging and dependency parsing**
