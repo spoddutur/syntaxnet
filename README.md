@@ -31,10 +31,13 @@ This endevour addresses to make the life of SyntaxNet enthusiasts easier. It pri
 <br/>
 
 ## 3.1 One line (~5mins) SyntaxNet 0.2 installation
-Iam sharing the osx package distribution `i.e., .whl file` that I've got successfully built using `bazel` build tool with all tests passing after pulling the latest code from [syntaxnet git repository](https://github.com/tensorflow/models). This will setup `syntaxnet 0.2 version` with a simple command in barely 5 minutes as shown below:
+Iam sharing the osx syntaxnet package distribution `i.e., syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl file` in this git repo that I've got successfully built using `bazel` build tool with all tests passing after pulling the latest code from [syntaxnet git repository](https://github.com/tensorflow/models). This will setup `syntaxnet 0.2 version` with a simple command in barely 5 minutes as shown below:
 ```markdown
+git clone https://github.com/spoddutur/syntaxnet.git
+cd <CLONED_SYNTAXNET_PROJ_DIR>
 sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ```
+Isn't 
 ##### Tech Stack:
 <img src="https://user-images.githubusercontent.com/22542670/38137700-d6bb2276-3443-11e8-8aa2-6f883d978fed.png" width="600" height="100"/>
 
