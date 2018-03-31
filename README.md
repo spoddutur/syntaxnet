@@ -8,14 +8,11 @@ When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source
 #### Pain Part - Syntaxnet is a RESEARCH MODEL:
 <hr/>
 
-
 - After The Great Models Move, Tensorflow categorized SyntaxNet as RESEARCH MODEL.
 - As mentioned [here](https://github.com/tensorflow/models/pull/2430), Tensorflow team will no more provide  guaranteed support to SyntaxNet and they encouraged **Individual researchers to support** research models.
-- The worser pain part of this restructure is that, it came with broken links within the repository which added to the woes of its installation. 
 
 #### Salt on the wound:
 <hr/>
-
 
 Apart from having `high struggles in installation and huge learning curve, No official support and lack of clear documentation` led forums talking about myraid of issues on SyntaxNet without proper solutions. Some of them were as basic as:
 - A lot of trouble understanding documentation around both syntaxnet and related tools
