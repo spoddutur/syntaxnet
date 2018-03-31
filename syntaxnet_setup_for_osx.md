@@ -5,7 +5,7 @@ I’ve setup tensorflow-syntaxnet in a virtual env named ‘tf’ in OsX. Please
 1. Setup virtual environment named ‘tf’.
   ```markdown
   virtualenv -p /usr/local/bin/python tf
-	source tf/bin/activate
+  source tf/bin/activate
   ```
 2. Install **six** - tensor flow dependency: 
 ```markdown
@@ -16,9 +16,13 @@ sudo easy_install --upgrade six
 sudo pip install --upgrade tensorflow
 ```
 4. Test tensor flow installation with helloworld in python terminal:
-
-![image](https://user-images.githubusercontent.com/22542670/38160623-82471074-34de-11e8-89b8-c6d89da40fb4.png)
-
+```markdown
+python
+import tensorflow as tf
+hello = tf.constant('HelloWorld, Tensorflow!!')
+sess = tf.session()
+print(sess.run(hello))
+```
 5. Install SyntaxNet Dependencies:
  ```markdown
  brew install swig
@@ -56,8 +60,4 @@ cd <LOCATION_TO_WHERE_SYNTAXNET_REPO_IS_COPIED>/models/research/syntaxnet
 echo 'Bob brought the pizza to Alice.' | syntaxnet/demo.sh
 ```
 10. Output:
-
-
-![image](https://user-images.githubusercontent.com/22542670/38160624-86233bd2-34de-11e8-9401-3d05c995ca50.png)
-
- 
+[!image](https://user-images.githubusercontent.com/22542670/38160793-93ae9d1c-34e0-11e8-813d-56298256858d.png)
