@@ -69,7 +69,8 @@ Upon introspection, main error source is dependency on autograd python package
 cat /root/.cache/bazel/_bazel_root/3b4c7ccb85580bc382ce4a52e9580003/execroot/__main__/bazel-out/local-opt/testlogs/syntaxnet/util/resources_test/test.log
 from autograd import core as ag_core ImportError: No module named autograd
 ```
-### Fix: pip install autograd
+### Fix: 
+pip install autograd
 
 ### 1.4.2 Issue: 
 Cannot import name container_types
@@ -83,7 +84,7 @@ Upon fixing with pip install autograd succesfully installs the package and thr
 We need to install a compatible version of autograd (1.1.13)
 `pip install autograd==1.1.13`. Also, again, make sure you have Bazel 0.5.4
 
-### 1.4. Bazel build failed with a bunch of tests on graph visualization’s and some more due to protobuf version incompatibility
+### 1.5. Bazel build failed with a bunch of tests on graph visualization’s and some more due to protobuf version incompatibility
 
 #### Issue:
 ```diff
