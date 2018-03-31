@@ -103,8 +103,32 @@ Two things. One, I had 3.0.0 protobuf installed and second missed installing pyg
 pip install -U protobuf==3.2.0
 pip install pygraphviz
 ```
+#### With those, the bazel test passed with no failing tests. But still there were some more hurdles in getting the wrapper as mentioned in the next section.
 
-## 2. Appendix
+## 2. Errors Post Successful Installation of Syntaxnet
+
+### 2.1 "from syntaxnet.ops import gen_parser_ops" import FAILED
+#### Issue:
+```diff
+- from tensorflow.python.eager import execute as _execute
+- ImportError: No module named eager
+```
+#### Cause: 
+tensorflow version i had wasnt compatible with latest syntaxnet - lot of restructuring happened.
+
+#### Fix:
+Add `--include-tensorflow` while building syntaxnet with bazel. This will bundle syntaxnet with tensorflow that is compatible with it.
+```markdown
+bazel-bin/dragnn/tools/build_pip_package --output-dir=/tmp/syntaxnet_pkg **-—include-tensorflow**
+sudo pip install /tmp/syntaxnet-pkg/syntaxnet_with_tensorflow-0.2-cp27-cp27m-macosx_10_6_intel.whl
+```
+### 2.1 "from syntaxnet import graph_builder" and "from syntaxnet import structured_graph_builder" imports FAILED
+#### Issue:
+Syntaxnet bundle didnt include these two files.
+#### Fix:
+Manually edited build_pip_package_runfiles to include these classes and did rebuild again.
+
+## 3. Appendix
 Couple of other links that helped me in resolving the issues I ran into:
 - https://stackoverflow.com/questions/47688252/tensorflow-trying-to-mutate-a-frozen-object-bazel
 - https://github.com/tensorflow/models/issues/1271
