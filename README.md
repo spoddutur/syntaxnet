@@ -14,7 +14,7 @@ When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source
 #### Salt on the wound:
 <hr/>
 
-Apart from having `high struggles in installation and huge learning curve, No official support and lack of clear documentation` led forums talking about myraid of issues on SyntaxNet without proper solutions. Some of them were as basic as:
+Apart from having `high struggles in installation and huge learning curve, no official support and lack of clear documentation` led forums talking about myraid of issues on SyntaxNet without proper solutions. Some of them were as basic as:
 - A lot of trouble understanding documentation around both syntaxnet and related tools
 - How to use Parsey McParseface model in python application
 - Confusing I/O handling in SyntaxNet because of the uncommon .conll file format it uses for input and output.
@@ -28,7 +28,7 @@ This endevour addresses to make the life of SyntaxNet enthusiasts easier. It pri
 <br/>
 
 ## 1.1 One line (~5mins) SyntaxNet 0.2 installation
-Iam sharing the osx package distribution `i.e., .whl file` that I've got successfully built using `bazel` build tool with all tests passing after pulling the latest code from [syntaxnet git repository](https://github.com/tensorflow/models). This will setup `syntaxnet 0.2 version` in barely 5 minutes as shown below:
+Iam sharing the osx package distribution `i.e., .whl file` that I've got successfully built using `bazel` build tool with all tests passing after pulling the latest code from [syntaxnet git repository](https://github.com/tensorflow/models). This will setup `syntaxnet 0.2 version` with a simple command in barely 5 minutes as shown below:
 ```markdown
 sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ```
