@@ -64,7 +64,7 @@ This was a bug in bazel. It was fixed in later versions.
 ### Fix: 
 Install 0.5.4 version of bazel. (This version has the fix for that)
 
-### 1.4 ~20 tests in bazel build failed
+### 1.4 Failing tests in bazel build
 <hr/>
 
 ### 1.4.1 Issue: 
@@ -88,9 +88,7 @@ Upon fixing with pip install autograd succesfully installs the package and thr
 We need to install a compatible version of autograd (1.1.13)
 `pip install autograd==1.1.13`. Also, again, make sure you have Bazel 0.5.4
 
-### 1.5. Bazel build failed with a bunch of tests on graph visualization’s and some more due to protobuf version incompatibility
-
-#### Issue:
+### 1.4.3. Issue:
 ```diff
 - /private/var/tmp/_bazel_surthi/81559a7957a70ca9917043de0cb80034/execroot/__main__/bazel-out/local-opt/testlogs/dragnn/python/graph_builder_test/test.log
 - //dragnn/python:render_parse_tree_graphviz_test                          FAILED in 7.2s
@@ -102,7 +100,7 @@ We need to install a compatible version of autograd (1.1.13)
 - //examples/dragnn:test_run_all_tutorials                                 FAILED in 7.9s
 ```
 #### Cause: 
-Two things. One, I had 3.0.0 protobuf installed and second missed installing pygraphviz.
+Bazel build failed due to two things. One, protobuf version incompatibility and two, missed installing pygraphviz.
 #### Fix:
 ```markdown
 pip install -U protobuf==3.2.0
@@ -111,6 +109,7 @@ pip install pygraphviz
 #### With those, the bazel test passed with no failing tests. But still there were some more hurdles in getting the wrapper as mentioned in the next section.
 
 ## 2. Errors Post Successful Installation of Syntaxnet
+Now, open python shell and try importing syntaxnet. Couple of classes that I need were not available. This could be because of the restructuring done as part of [The Great Models Move change](https://github.com/tensorflow/models/pull/2430). Let's look at some of the failing imports I needed and how i got them fixed.
 
 ### 2.1 "from syntaxnet.ops import gen_parser_ops" import FAILED
 #### Issue:
