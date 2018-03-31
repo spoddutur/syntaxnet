@@ -2,7 +2,7 @@
 ## Hammering SyntaxNet to behave:
 This blog is a listing of errors encountered while setting it up and how I hammered them to make it behave.
 <br/>
-**Note:** I've blogged down the [final working installation instructions to get syntaxnet import working in python](https://github.com/spoddutur/syntaxnet/edit/master/syntaxnet_setup_for_osx.md).
+**__Note:__** I've also blogged the [final working installation instructions to get syntaxnet import working in python](https://github.com/spoddutur/syntaxnet/edit/master/syntaxnet_setup_for_osx.md).
 	
 ## 1. Build Errors
 Build is done with `bazel test --linkopt=-headerpad_max_install_names dragnn/... syntaxnet/... util/utf8/...` command.
