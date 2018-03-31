@@ -1,5 +1,5 @@
 # Syntaxnet Parsey McParseface Python Wrapper for DependencyParsing
-**Note:** This syntaxnet built contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
+**Note:** This syntaxnet build contains [The Great Models Move](https://github.com/tensorflow/models/pull/2430) change. 
 
 ## Introduction - Troubles of the world's best parser SyntaxNet
 
