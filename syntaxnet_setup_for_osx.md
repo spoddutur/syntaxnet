@@ -60,4 +60,6 @@ cd <LOCATION_TO_WHERE_SYNTAXNET_REPO_IS_COPIED>/models/research/syntaxnet
 echo 'Bob brought the pizza to Alice.' | syntaxnet/demo.sh
 ```
 10. Output:
+
+
 ![image](https://user-images.githubusercontent.com/22542670/38160793-93ae9d1c-34e0-11e8-813d-56298256858d.png)
