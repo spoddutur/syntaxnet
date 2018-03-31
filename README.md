@@ -25,7 +25,7 @@ Apart from having `high struggles in installation and huge learning curve, no of
 ## 2. What does this project do
 This endevour addresses to make the life of SyntaxNet enthusiasts easier. It primarily saves all those hours to get `Google's SyntaxNet Parsey McParseface` up and running in a way it should be. For this, am providing two things as part of this project:
 1. **One line (~5mins) SyntaxNet 0.2 installation**
-2. **Syntaxnet Parsey McParseface wrapper**
+2. **Syntaxnet Parsey McParseface wrapper for POS tagging and dependency parsing**
 
 <br/>
 
@@ -37,13 +37,14 @@ sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ##### Tech Stack:
 <img src="https://user-images.githubusercontent.com/22542670/38137700-d6bb2276-3443-11e8-8aa2-6f883d978fed.png" width="600" height="100"/>
 
-## 2.2 Syntaxnet Parsey McParseface wrapper 
+## 2.2 Syntaxnet Parsey McParseface wrapper for POS tagging and Dependency parsing 
 ##### Here comes the most interesting (a.k.a challenging) part i.e., How to use syntaxnet in a python application. It should no more be of any trouble after this point :)
 
 `my_parser_eval.py` is the file that contains the python-wrapper which I implemented to wrap SyntaxNet. The list of API's exposed in this wrapper are listed below:
 ```markdown
 1. Api to initialise parser: 
 `tagger = my_parser_eval.SyntaxNetProcess("brain_tagger")`
+("brain_tagger" will initialise pos tagger. change it to "brain_parser" for dependency parsing)
 
 2. Api to input data to parser: 
 `my_parser_eval._write_input("<YOUR_ENGLISH_SENTENCE_INPUT>")`
