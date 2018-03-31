@@ -3,7 +3,7 @@
 
 ## 1. Introduction - Troubles of the world's best parser SyntaxNet
 
-When Google made [The World’s Most Accurate Parser i.e., SyntaxNet open-source](https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html), it grabbed widespread attention from machine-learning developers and researchers who were interested in core applications of NLU like automatic extraction of information, translation etc. Following gif shows how syntaxnet internally builds the dependency tree:
+When Google declared that [The World’s Most Accurate Parser i.e., SyntaxNet goes open-source](https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html), it grabbed widespread attention from machine-learning developers and researchers who were interested in core applications of NLU like automatic extraction of information, translation etc. Following gif shows how syntaxnet internally builds the dependency tree:
 
 <img src="https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif" width="500" height="300"/>
 
