@@ -54,6 +54,7 @@ cd <LOCATION_TO_WHERE_SYNTAXNET_REPO_IS_COPIED>/models/research/syntaxnet/tensor
  cd <LOCATION_TO_WHERE_SYNTAXNET_REPO_IS_COPIED>
  run “bazel test --linkopt=-headerpad_max_install_names dragnn/... syntaxnet/... util/utf8/…”
  ```
+  All the tests should pass with the above command and it will create bazel-bin directory in  `<LOCATION_TO_WHERE_SYNTAXNET_REPO_IS_COPIED>/models/research/syntaxnet/bazel-bin`. This is the bin folder using which we'll package syntaxnet as module and install it. Before that, let's test the installation.
 9. Test Syntaxnet: 
 ```markdown
 cd <LOCATION_TO_WHERE_SYNTAXNET_REPO_IS_COPIED>/models/research/syntaxnet
@@ -63,3 +64,30 @@ echo 'Bob brought the pizza to Alice.' | syntaxnet/demo.sh
 
 
 ![image](https://user-images.githubusercontent.com/22542670/38160793-93ae9d1c-34e0-11e8-813d-56298256858d.png)
+
+11. Bundle syntaxnet package in `.whl packaging` format.
+```markdown
+mkdir /tmp/syntaxnet_pkg
+cd <LOCATION_TO_WHERE_SYNTAXNET_REPO_IS_COPIED>/models/research/syntaxnet
+bazel-bin/dragnn/tools/build_pip_package --output-dir=/tmp/syntaxnet_pkg
+**Output:** Wrote /tmp/syntaxnet_pkg/syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
+```
+12. Install syntaxnet module:
+```markdown
+sudo pip install /tmp/syntaxnet_pkg/syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
+```
+### Output: Successfully installed syntaxnet-0.2
+## Verification
+###### Open up python shell and check that the following imports work fine
+```markdown
+python
+from syntaxnet import sentence_pb2
+from syntaxnet import graph_builder
+from syntaxnet import structured_graph_builder
+from syntaxnet.ops import load_parser_ops
+from syntaxnet.ops import gen_parser_ops
+from syntaxnet import task_spec_pb2
+```
+
+There were a bunch of errors I faced before I could reach this final point of successful installation with imports working in python shell. I've listed the issues that i faced `here` and how i went about fixing them here. Hope that saves some time for you :)
+
