@@ -112,7 +112,8 @@ pip install pygraphviz
 Now, open python shell and try importing syntaxnet. Couple of classes that I need were not available. This could be because of the restructuring done as part of [The Great Models Move change](https://github.com/tensorflow/models/pull/2430). Let's look at some of the failing imports I needed and how i got them fixed.
 
 ### 2.1 "from syntaxnet.ops import gen_parser_ops" import FAILED
-#### Issue:
+#### Issue: 
+gen_parser_ops tries to import 'eager' module from tensorflow which resulted in import error.
 ```diff
 - from tensorflow.python.eager import execute as _execute
 - ImportError: No module named eager
