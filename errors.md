@@ -8,7 +8,7 @@ Iam listing some of the issues I faced here and how i got them fixed and hoping 
 ### 1.1. Current Bazel version is 0.11.1, expected at least 0.4.5
 <hr/>
 
-### Issue:
+#### Issue:
 ```diff
 - Current Bazel version is 0.11.1, expected at least 0.4.5
 - ERROR: Error evaluating WORKSPACE file
@@ -16,12 +16,16 @@ Iam listing some of the issues I faced here and how i got them fixed and hoping 
 INFO: Elapsed time: 0.127s
 - FAILED: Build did NOT complete successfully (0 packages loaded)
 ```
-### Cause: Initially, I had latest bazel version installed using `pip install bazel` (0.11.1).
-##### Fix: Downgraded it to 0.5.1 as mentioned in the error.
+#### Cause: 
+Initially, I had latest bazel version installed using `pip install bazel` (0.11.1).
+#### Fix: 
+Downgraded it to 0.5.1 as mentioned in the error.
 
 ### 1.2. Bazel 0.5.1 install failed: 
+<hr/>
+
 brew install bazel@0.5.1 with Can't find bundle for base name com.google.errorprone.errors, locale en_IN
-### Issue:
+#### Issue:
 ```diff
 - Last 15 lines from /Users/surthi/Library/Logs/Homebrew/bazel@0.5.1/01.compile.sh:
 - at com.google.devtools.build.buildjar.BazelJavaBuilder.processRequest(BazelJavaBuilder.java:89)
@@ -32,8 +36,10 @@ brew install bazel@0.5.1 with Can't find bundle for base name com.google.errorpr
 - at java.util.ResourceBundle.getBundle(ResourceBundle.java:854)
 - at com.sun.tools.javac.util.JavacMessages.lambda$add$0(JavacMessages.java:106)
 ```
-### Cause: bazel compile via brew failed.
-### Fix: Downloaded installer from bazel release version and installed.
+#### Cause: 
+bazel compile via brew failed.
+#### Fix: 
+Downloaded installer from bazel release version and installed.
 ```markdown
 Download bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh from  https://github.com/bazelbuild/bazel/releases 
 chmod +x ~/Downloads/bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh
@@ -41,16 +47,22 @@ sh ~/Downloads/bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh
 ```
 
 ### 1.3 py_proto_library py_libs += [default_runtime] trying to mutate a frozen object
+<hr/>
+
 ### Issue:
 ```diff
 - “.../syntaxnet/syntaxnet/syntaxnet.bzl”, line 53, in tf_proto_library_py py_proto_library(name = name, srcs = srcs, srcs_versi...", <5 more arguments>) File 
 - "/private/var/tmp/_bazel_XXX/f74e5a21c3ad09aeb110d9de15110035/external/protobuf_archive/protobuf.bzl", line 374, in py_proto_library py_libs += [default_runtime] trying to mutate a frozen object 
 - ERROR: package contains errors: dragnn/protos
 ```
-### Cause: Bug in bazel
-### Fix: Install 0.5.4 version of bazel. This version has the fix for that.
+### Cause: 
+Bug in bazel
+### Fix: 
+Install 0.5.4 version of bazel. This version has the fix for that.
 
 ### 1.4 ~20 tests in bazel build failed
+<hr/>
+
 ### 1.4.1 Issue #1: Upon introspection, main error source is dependency on autograd python package
 ```markdown
 cat /root/.cache/bazel/_bazel_root/3b4c7ccb85580bc382ce4a52e9580003/execroot/__main__/bazel-out/local-opt/testlogs/syntaxnet/util/resources_test/test.log
@@ -65,12 +77,13 @@ Upon fixing with pip install autograd succesfully installs the package and thr
 cat /root/.cache/bazel/_bazel_root/3b4c7ccb85580bc382ce4a52e9580003/execroot/__main__/bazel-out/local-opt/testlogs/syntaxnet/util/resources_test/test.log
 from autograd import container_types ImportError: cannot import name container_types
 ```
-### Fix #2: We need to install a compatible version of autograd (1.1.13)
+### Fix #2: 
+We need to install a compatible version of autograd (1.1.13)
 `pip install autograd==1.1.13`. Also, again, make sure you have Bazel 0.5.4
 
 ### 1.4. Bazel build failed with a bunch of tests on graph visualization’s and some more due to protobuf version incompatibility
 
-### Issue:
+#### Issue:
 ```diff
 - /private/var/tmp/_bazel_surthi/81559a7957a70ca9917043de0cb80034/execroot/__main__/bazel-out/local-opt/testlogs/dragnn/python/graph_builder_test/test.log
 - //dragnn/python:render_parse_tree_graphviz_test                          FAILED in 7.2s
@@ -81,8 +94,9 @@ from autograd import container_types ImportError: cannot import name container
 - /private/var/tmp/_bazel_surthi/81559a7957a70ca9917043de0cb80034/execroot/__main__/bazel-out/local-opt/testlogs/dragnn/python/visualization_test/test.log
 - //examples/dragnn:test_run_all_tutorials                                 FAILED in 7.9s
 ```
-### Cause: Two things. One, I had 3.0.0 protobuf installed and second missed installing pygraphviz.
-### Fix:
+#### Cause: 
+Two things. One, I had 3.0.0 protobuf installed and second missed installing pygraphviz.
+#### Fix:
 ```markdown
 pip install -U protobuf==3.2.0
 pip install pygraphviz
