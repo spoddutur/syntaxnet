@@ -24,7 +24,7 @@ Downgraded it to 0.5.1 as mentioned in the error.
 ### 1.2. Bazel 0.5.1 install failed: 
 <hr/>
 
-brew install bazel@0.5.1 with Can't find bundle for base name com.google.errorprone.errors, locale en_IN
+Installing bazel with `brew install bazel@0.5.1` threw **Can't find bundle for base name com.google.errorprone.errors, locale en_IN** error as shown below
 #### Issue:
 ```diff
 - Last 15 lines from /Users/surthi/Library/Logs/Homebrew/bazel@0.5.1/01.compile.sh:
