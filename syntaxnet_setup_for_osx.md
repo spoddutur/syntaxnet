@@ -89,5 +89,6 @@ from syntaxnet.ops import gen_parser_ops
 from syntaxnet import task_spec_pb2
 ```
 
-There were a bunch of errors I faced before I could reach this final point of successful installation with imports working in python shell. I've listed the issues that i faced `here` and how i went about fixing them here. Hope that saves some time for you :)
+## Appendix - Hammering Syntaxnet to behave 
+There were a bunch of errors I faced before I could reach this final point of successful installation with imports working in python shell. I've listed the issues that i faced [here](https://github.com/spoddutur/syntaxnet/blob/master/hammering_syntaxnet_to_behave.md) and how i went about fixing them here. Hope that saves some time for you :)
 
