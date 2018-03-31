@@ -37,7 +37,7 @@ Installing bazel with `brew install bazel@0.5.1` threw **Can't find bundle for b
 - at com.sun.tools.javac.util.JavacMessages.lambda$add$0(JavacMessages.java:106)
 ```
 #### Cause: 
-Upon investigating this, seemed like this is a common error that occurs with bazel installation via brew.
+Upon investigating this, seemed like this is a common error that people posted online with bazel installation via brew.
 #### Fix: 
 Downloaded installer from bazel release version and installed.
 ```markdown
@@ -56,28 +56,30 @@ sh ~/Downloads/bazel-0.5.4-without-jdk-installer-darwin-x86_64.sh
 - ERROR: package contains errors: dragnn/protos
 ```
 ### Cause: 
-Bug in bazel
+This was a bug in bazel. It was fixed in later versions.
 ### Fix: 
-Install 0.5.4 version of bazel. This version has the fix for that.
+Install 0.5.4 version of bazel. (This version has the fix for that)
 
 ### 1.4 ~20 tests in bazel build failed
 <hr/>
 
-### 1.4.1 Issue #1: Upon introspection, main error source is dependency on autograd python package
+### 1.4.1 Issue: 
+Upon introspection, main error source is dependency on autograd python package
 ```markdown
 cat /root/.cache/bazel/_bazel_root/3b4c7ccb85580bc382ce4a52e9580003/execroot/__main__/bazel-out/local-opt/testlogs/syntaxnet/util/resources_test/test.log
 from autograd import core as ag_core ImportError: No module named autograd
 ```
-### Fix #1: pip install autograd
+### Fix: pip install autograd
 
-### 1.4.2 Issue #2: cannot import name container_types
+### 1.4.2 Issue: 
+Cannot import name container_types
 ### Cause: 
 Upon fixing with pip install autograd succesfully installs the package and throws a name import error
-```markdown
-cat /root/.cache/bazel/_bazel_root/3b4c7ccb85580bc382ce4a52e9580003/execroot/__main__/bazel-out/local-opt/testlogs/syntaxnet/util/resources_test/test.log
-from autograd import container_types ImportError: cannot import name container_types
+```diff
+- cat /root/.cache/bazel/_bazel_root/3b4c7ccb85580bc382ce4a52e9580003/execroot/__main__/bazel-out/local-opt/testlogs/syntaxnet/util/resources_test/test.log
+- from autograd import container_types ImportError: cannot import name container_types
 ```
-### Fix #2: 
+### Fix: 
 We need to install a compatible version of autograd (1.1.13)
 `pip install autograd==1.1.13`. Also, again, make sure you have Bazel 0.5.4
 
