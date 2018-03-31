@@ -37,7 +37,7 @@ brew install bazel@0.5.1 with Can't find bundle for base name com.google.errorpr
 - at com.sun.tools.javac.util.JavacMessages.lambda$add$0(JavacMessages.java:106)
 ```
 #### Cause: 
-bazel compile via brew failed.
+Upon investigating this, seemed like this is a common error that occurs with bazel installation via brew.
 #### Fix: 
 Downloaded installer from bazel release version and installed.
 ```markdown
