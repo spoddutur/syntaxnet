@@ -5,19 +5,21 @@ Build is done with `bazel test --linkopt=-headerpad_max_install_names dragnn/...
 I ran into a myriad of issues before getting the build successful with all tests passing.
 Iam listing some of the issues I faced here and how i got them fixed and hoping to help some SyntaxNet enthusiast out there facing similar issues :)]
 
-1.1. Bazel version
-##### Issue:
-Current Bazel version is 0.10.0, expected at least 0.4.5
+### 1.1. Current Bazel version is 0.11.1, expected at least 0.4.5
+<hr/>
+
+### Issue:
 ```diff
+- Current Bazel version is 0.11.1, expected at least 0.4.5
 - ERROR: Error evaluating WORKSPACE file
 - ERROR: error loading package 'external': Package 'external' contains errors
 INFO: Elapsed time: 0.127s
 - FAILED: Build did NOT complete successfully (0 packages loaded)
 ```
-##### Cause: Initially, I had latest bazel version installed using `pip install bazel` (0.11.1).
+### Cause: Initially, I had latest bazel version installed using `pip install bazel` (0.11.1).
 ##### Fix: Downgraded it to 0.5.1 as mentioned in the error.
 
-2. Bazel 0.5.1 install failed: brew install bazel@0.5.1
+### 1.2. Bazel 0.5.1 install failed: brew install bazel@0.5.1 with Can't find bundle for base name com.google.errorprone.errors, locale en_IN
 Issue:
 Last 15 lines from /Users/surthi/Library/Logs/Homebrew/bazel@0.5.1/01.compile.sh:
 at com.google.devtools.build.buildjar.BazelJavaBuilder.processRequest(BazelJavaBuilder.java:89)
