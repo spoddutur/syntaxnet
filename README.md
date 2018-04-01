@@ -9,7 +9,7 @@ When Google declared that [The World’s Most Accurate Parser i.e., SyntaxNet go
 
 ## 2. Troubles of the world's best parser SyntaxNet
 Predominantly one will find two approaches to use SyntaxNet:
-1. Using (demo.sh)[https://github.com/tensorflow/models/blob/master/research/syntaxnet/syntaxnet/demo.sh] script provided by syntaxnet
+1. Using [demo.sh](https://github.com/tensorflow/models/blob/master/research/syntaxnet/syntaxnet/demo.sh) script provided by syntaxnet
 2. Invoke the same from python as a subprocess as shown below. This approach is obviously inefficient, non-scalable and over-kill as it internally calls two other python scripts (parser_eval and conll2tree).
 ```markdown
 import subprocess
