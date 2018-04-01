@@ -8,6 +8,11 @@ When Google declared that [The World’s Most Accurate Parser i.e., SyntaxNet go
 <img src="https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/images/looping-parser.gif" width="500" height="300"/>
 
 ## 2. Troubles of the world's best parser SyntaxNet
+Majority of the exmples on its usage are done in 2 ways:
+1. Using (demo.sh)[https://github.com/tensorflow/models/blob/master/research/syntaxnet/syntaxnet/demo.sh] script provided by syntaxnet
+2. Invoke the same from python as a subprocess (which is not a scalable approach).
+##### I wanted a proper python application where one can do `import syntaxnet` and play with it.
+
 #### 2.1 Pain Part - Syntaxnet is a RESEARCH MODEL:
 <hr/>
 
