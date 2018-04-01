@@ -19,7 +19,16 @@ subprocess.call([
 "echo 'Bob brought the pizza to Alice.' | syntaxnet/demo.sh"
 ], shell = True)
 ```
-##### I wanted a proper python application where one can do `import syntaxnet` and play with it.
+```diff
++ I wanted a proper python application where one can do `import syntaxnet` as shown below and play with it.
+```
+```markdown
+import syntaxnet
+from syntaxnet import gen_parser_ops...
+```
+```diff
++ I could manage to get this done and hence sharing my project here. Please find below as to how I got this!!
+```
 
 #### 2.1 Pain Part - Syntaxnet is a RESEARCH MODEL:
 <hr/>
