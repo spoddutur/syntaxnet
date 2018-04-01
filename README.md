@@ -28,7 +28,7 @@ from syntaxnet import gen_parser_ops...
 + I could manage to get this done and hence sharing my project here. Please find below as to how I got this!!
 ```
 
-#### 2.1 Pain Part - Syntaxnet is a RESEARCH MODEL:
+#### 2.1 Other Pain Part - Syntaxnet is a RESEARCH MODEL:
 <hr/>
 
 - After [The Great Models Move](https://github.com/tensorflow/models/pull/2430), Tensorflow categorized SyntaxNet as RESEARCH MODEL.
@@ -57,7 +57,7 @@ git clone https://github.com/spoddutur/syntaxnet.git
 cd <CLONED_SYNTAXNET_PROJ_DIR>
 sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 ```
-Isn't 
+
 ##### Tech Stack:
 <img src="https://user-images.githubusercontent.com/22542670/38137700-d6bb2276-3443-11e8-8aa2-6f883d978fed.png" width="600" height="100"/>
 
