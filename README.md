@@ -20,9 +20,11 @@ subprocess.call([
 ], shell = True)
 ```
 ```diff
-+ I wanted a proper scalable python application where one can do `import syntaxnet` and use it as shown below:
-+ import syntaxnet
-+ from syntaxnet import gen_parser_ops...
++ I wanted a proper scalable python application where one can do `import syntaxnet` 
++ and use it as shown below:
+import syntaxnet
+from syntaxnet import gen_parser_ops...
+
 + I could manage to get this done and hence sharing my project here. Please find below as to how I got this!!
 ```
 
