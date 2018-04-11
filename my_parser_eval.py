@@ -23,7 +23,7 @@ from tensorflow.python.platform import tf_logging as logging
 from syntaxnet import sentence_pb2, structured_graph_builder
 from syntaxnet.ops import gen_parser_ops
 import syntaxnet.load_parser_ops
-from syntaxnet.conll2tree import to_dict
+# from syntaxnet.conll2tree import to_dict
 
 input_file_path = os.path.join(PROJECT_ROOT, "data", "input-file.txt")
 output_file_path = os.path.join(PROJECT_ROOT, "data", "output-file.txt")
@@ -49,6 +49,92 @@ def _write_input(sentence):
   	input_file.flush()
 	input_file.close()
 
+def as_asciitree(sentence):
+    import asciitree
+    from collections import defaultdict
+    children = defaultdict(list)
+    # since erased nodes may be missing, multiple tokens may have same
+    # index (CCprocessed), etc.
+    token_to_index = {}
+    roots = []
+    # for token in self:
+    for i in range(0, len(sentence.token)):
+        token = sentence.token[i]
+        print token.word, token.tag, token.label, token.head
+        children[token.head].append(token)
+        token_to_index[token.word+":"+token.label+":"+token.head] = i + 1
+        if token.head == -1:
+            roots.append(token)
+    
+    assert roots, "Couldn't find root Token(s)"
+
+    if len(roots) > 1:
+        # multiple roots so we make a fake one to be their parent
+        root = Token(0, 'ROOT', 'ROOT-LEMMA', 'ROOT-CPOS', 'ROOT-POS',
+            None, None, 'ROOT-DEPREL', None, None, None)
+        token_to_index[root] = 0
+        children[0] = roots
+    else:
+        root = roots[0]
+
+    def child_func(token):
+        index = token_to_index[token.word+":"+token.label+":"+token.head]
+        return children[index]
+    if not str_func:
+        def str_func(token):
+            return ' %s [%s]' % (token.word, token.label)
+
+    return asciitree.draw_tree(root, child_func, str_func)
+
+def to_dict(sentence):
+  	token_str = list()
+	children = [[] for token in sentence.token]
+	roots = []
+	root = -1
+	for i in range(0, len(sentence.token)):
+		token = sentence.token[i]
+		print "current token:", token
+		token_str.append('%s %s %s @%d' %
+		(token.word, token.tag, token.label, (i+1)))
+		if token.head == -1:
+			roots.append(i)
+			root = i
+		else:
+			print "appending child:", i , token.word, " - to parent - ", token.head
+			children[token.head].append(i)
+
+	assert roots, "Couldnt find roots!!"
+
+	if len(roots) > 1:
+		# multiple roots so we make a fake one to be their parent
+		# root = Token(0, 'ROOT', 'ROOT-LEMMA', 'ROOT-CPOS', 'ROOT-POS',
+		# 	None, None, 'ROOT-DEPREL', None, None, None)
+		print ("========== FOUND > 1 ROOT ==========", roots)
+		s = '%s %s %s @%d' %("","","",1)
+		token_str.insert(0, s)
+		children[0] = roots
+		root = 0
+
+	visited = []
+	for i in range(len(children)):
+		visited.append(0) 
+		
+	def _get_dict(i):
+		d = collections.OrderedDict()
+		for c in children[i]:
+			print "CHILDREN:", c, token_str[c]
+			if (visited[c] == 0):
+				visited[c] = 1
+				d[token_str[c]] = _get_dict(c)
+
+	  		# d[token_str[c]] = _get_dict(c)
+		return d
+
+	tree = collections.OrderedDict()
+	print "ROOT:", root
+	tree[token_str[root]] = _get_dict(root)
+	return tree
+
 def pretty_print():
 	_write_input(_read_output().strip())
 	logging.set_verbosity(logging.INFO)
@@ -60,6 +146,9 @@ def pretty_print():
 		while True:
 			documents, finished = sess.run(src)
 			logging.info('Read %d documents', len(documents))
+			# for d in documents:
+			# 	sentence.ParseFromString(d)
+			# 	as_asciitree(sentence)
 			for d in documents:
 				sentence.ParseFromString(d)
 				tr = asciitree.LeftAligned()
