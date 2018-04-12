@@ -105,3 +105,9 @@ sudo pip install syntaxnet-0.2-cp27-cp27m-macosx_10_6_intel.whl
 - **main.py:** Demo sample usage
 - **/data:** folder where parser’s intermediate input’s and output’s are dumped.
 - **.whl:** osx package distribution of the final successful syntaxnet built using which you can setup `syntaxnet 0.2 version` in barely 5 minutes 
+
+## 7. References:
+- [Tensorflow Models](https://github.com/tensorflow/models.git)
+- [SyntaxNet](https://github.com/tensorflow/models/tree/master/research/syntaxnet)
+- [PyStanfordDependencies](https://github.com/dmcc/PyStanfordDependencies)
+
