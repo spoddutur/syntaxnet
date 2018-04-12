@@ -49,51 +49,14 @@ def _write_input(sentence):
   	input_file.flush()
 	input_file.close()
 
-def as_asciitree(sentence):
-    import asciitree
-    from collections import defaultdict
-    children = defaultdict(list)
-    # since erased nodes may be missing, multiple tokens may have same
-    # index (CCprocessed), etc.
-    token_to_index = {}
-    roots = []
-    # for token in self:
-    for i in range(0, len(sentence.token)):
-        token = sentence.token[i]
-        print token.word, token.tag, token.label, token.head
-        children[token.head].append(token)
-        token_to_index[token.word+":"+token.label+":"+token.head] = i + 1
-        if token.head == -1:
-            roots.append(token)
-    
-    assert roots, "Couldn't find root Token(s)"
-
-    if len(roots) > 1:
-        # multiple roots so we make a fake one to be their parent
-        root = Token(0, 'ROOT', 'ROOT-LEMMA', 'ROOT-CPOS', 'ROOT-POS',
-            None, None, 'ROOT-DEPREL', None, None, None)
-        token_to_index[root] = 0
-        children[0] = roots
-    else:
-        root = roots[0]
-
-    def child_func(token):
-        index = token_to_index[token.word+":"+token.label+":"+token.head]
-        return children[index]
-    if not str_func:
-        def str_func(token):
-            return ' %s [%s]' % (token.word, token.label)
-
-    return asciitree.draw_tree(root, child_func, str_func)
-
 def to_dict(sentence):
   	token_str = list()
-	children = [[] for token in sentence.token]
+	# children = [[] for token in sentence.token]
+	children = [[] for i in range(0, len(sentence.token)+1)]
 	roots = []
 	root = -1
 	for i in range(0, len(sentence.token)):
 		token = sentence.token[i]
-		print "current token:", token
 		token_str.append('%s %s %s @%d' %
 		(token.word, token.tag, token.label, (i+1)))
 		if token.head == -1:
@@ -110,10 +73,11 @@ def to_dict(sentence):
 		# root = Token(0, 'ROOT', 'ROOT-LEMMA', 'ROOT-CPOS', 'ROOT-POS',
 		# 	None, None, 'ROOT-DEPREL', None, None, None)
 		print ("========== FOUND > 1 ROOT ==========", roots)
-		s = '%s %s %s @%d' %("","","",1)
-		token_str.insert(0, s)
-		children[0] = roots
-		root = 0
+		new_root = '%s %s %s @%d' %("","","",len(token_str))
+		token_str.append(new_root)
+		index_of_new_root = len(token_str) - 1
+		children[index_of_new_root] = roots #ROOT-POS
+		root = index_of_new_root
 
 	visited = []
 	for i in range(len(children)):
@@ -122,16 +86,15 @@ def to_dict(sentence):
 	def _get_dict(i):
 		d = collections.OrderedDict()
 		for c in children[i]:
-			print "CHILDREN:", c, token_str[c]
-			if (visited[c] == 0):
-				visited[c] = 1
-				d[token_str[c]] = _get_dict(c)
+			# print "CHILDREN:", c, token_str[c]
+			#if (visited[c] == 0):
+			#	visited[c] = 1
+			#	d[token_str[c]] = _get_dict(c)
 
-	  		# d[token_str[c]] = _get_dict(c)
+	  		d[token_str[c]] = _get_dict(c)
 		return d
 
 	tree = collections.OrderedDict()
-	print "ROOT:", root
 	tree[token_str[root]] = _get_dict(root)
 	return tree
 
